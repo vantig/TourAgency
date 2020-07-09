@@ -1,0 +1,4 @@
+name1  Minsk Moscow 900 7
+name2  Ottava NewYork 1070 70
+name3  Brest Gomel 200 4
+name4  Minsk Krakaw 500 12

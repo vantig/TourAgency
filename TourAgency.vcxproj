@@ -124,9 +124,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bus.h" />
+    <ClInclude Include="CompletedRout.h" />
     <ClInclude Include="HeaderMain.h" />
     <ClInclude Include="Rout.h" />
     <ClInclude Include="TourAgency.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Bus.txt" />
+    <Text Include="Rout.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
