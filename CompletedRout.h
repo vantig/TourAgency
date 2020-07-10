@@ -23,7 +23,7 @@ private:
 };
 std::ostream& operator<<(std::ostream& out, const CompletedRout&temp)
 {
-	out << temp.getCost() << " " << temp.getName() << " " << temp.getNumber() << " " << temp.getDateOfStart() << " " << temp.getDateOfFinish() << " " << temp.getCountofPassengers();
+	out <<"cost "<< temp.getCost() << " name of rout " << temp.getName() << " number  " << temp.getNumber() << " date of start " << temp.getDateOfStart() << " date of finish " << temp.getDateOfFinish() << " count of passangers " << temp.getCountofPassengers();
 	return out;
  }
 

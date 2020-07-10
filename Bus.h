@@ -22,7 +22,7 @@ private:
 };
  std::ostream& operator<<(std::ostream& out, const Bus&bus)
 {
-	 out << bus.getNumber() << " " << bus.getBusName() << " " << bus.getMaxPasangers();
+	 out <<" bus number "<< bus.getNumber() << " bus name " << bus.getBusName() << " max passangers " << bus.getMaxPasangers();
 	 return out;
 }
 

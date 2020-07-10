@@ -24,7 +24,7 @@ private:
 };
  std::ostream& operator<<(std::ostream& out, const Rout&rout)
 {
-	 out<< rout.name <<" "<< rout.start <<" "<< rout.finish <<" "<< rout.km <<" "<< rout.cost;
+	 out<<" rout name "<< rout.name <<" rout start "<< rout.start <<" rout finish "<< rout.finish <<" rout km "<< rout.km <<" rout cost "<< rout.cost;
 	 return out;
 }
 

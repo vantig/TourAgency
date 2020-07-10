@@ -8,10 +8,10 @@ int main()
 	in.close();
 	in.open("Rout.txt");
 	agency.readRouts(in);
-	agency.printBuses(std::cout);
-	agency.printRouts(std::cout);
-
-
+	/*agency.printBuses(std::cout);
+	agency.printRouts(std::cout);*/
+	agency.addCompletedRout("name1");
+	agency.printCompletedRouts(std::cout);
 
 
 
