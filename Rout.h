@@ -13,6 +13,8 @@ public:
 	void setName(std::string n) { name = n; }
 	void setCost(double c) { cost = c; }
 	friend std::istream& operator>>(std::istream& in, Rout&);
+	friend	std::ostream& operator<<(std::ostream& out, Rout& rout);
+
 private:
 	std::string name;
 	std::string start;
@@ -20,7 +22,11 @@ private:
 	double km;
 	double cost;
 };
-
+ std::ostream& operator<<(std::ostream& out, Rout&rout)
+{
+	 out<< rout.name <<" "<< rout.start <<" "<< rout.finish <<" "<< rout.km <<" "<< rout.cost;
+	 return out;
+}
 
 std::istream& operator>>(std::istream& in, Rout&rout)
 {

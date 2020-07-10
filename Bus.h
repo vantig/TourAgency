@@ -6,7 +6,7 @@ public:
 	Bus() = default;
 	~Bus() = default;
 	std::string	getNumber() const{ return number; }
-	std::string	getName()const{ return name; }
+	std::string	getBusName()const{ return name; }
 	double	getMileage()const { return mileage; }
 	size_t getMaxPasangers()const { return maxPasangers; }
 	void setNumber(std::string n) { number = n; }
@@ -22,7 +22,7 @@ private:
 };
  std::ostream& operator<<(std::ostream& out, Bus&bus)
 {
-	 out << bus.getNumber() << " " << bus.getName() << " " << bus.getMaxPasangers();
+	 out << bus.getNumber() << " " << bus.getBusName() << " " << bus.getMaxPasangers();
 	 return out;
 }
 

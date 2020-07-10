@@ -8,6 +8,9 @@ public:
 	void readBuses(std::istream&);
 	void readRouts(std::istream&);
 	void addCompletedRout(std::string name);
+	void printBuses(std::ostream&);
+	void printRouts(std::ostream&);
+	void printCompletedRouts(std::ostream&);
 private:
 	std::vector<Bus> buses;
 	std::vector<Rout> routs;
@@ -15,6 +18,22 @@ private:
 
 
 };
+void  TourAgency::printBuses(std::ostream&out)
+{
+	std::copy(buses.begin(), buses.end(), std::ostream_iterator<Bus>(out,"\n"));
+}
+void  TourAgency::printRouts(std::ostream& out)
+{
+	std::copy(routs.begin(), routs.end(), std::ostream_iterator<Rout>(out, "\n"));
+
+}
+
+void  TourAgency::printCompletedRouts(std::ostream& out)
+{
+	std::copy(completedRouts.begin(), completedRouts.end(), std::ostream_iterator<CompletedRout>(out, "\n"));
+
+}
+
 void TourAgency::addCompletedRout(std::string name)
 {
 	auto it = std::find_if(routs.begin(), routs.end(), [name](const Rout& rout) 
