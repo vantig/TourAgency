@@ -1,6 +1,6 @@
-#include"HeaderMain.h"
+﻿#include"HeaderMain.h"
 int main()
-{
+{ //прируововоы
 	TourAgency agency;
 	//std::ifstream
 	std::ifstream in("Bus.txt");
