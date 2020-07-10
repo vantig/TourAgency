@@ -1,6 +1,7 @@
 #include"HeaderMain.h"
 int main()
 {
+	//"привет"
 	TourAgency agency;
 	//std::ifstream
 	std::ifstream in("Bus.txt");
