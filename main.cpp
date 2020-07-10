@@ -10,9 +10,20 @@ int main()
 	agency.readRouts(in);
 	/*agency.printBuses(std::cout);
 	agency.printRouts(std::cout);*/
-	agency.addCompletedRout("name1");
+	std::string str;
+	bool flag=false;
+	while (!flag)
+	{
+		std::cout << "Enter name of rout " << std::endl;
+		std::cin >> str;
+		agency.addCompletedRout(str);
+		std::cout << "End? " << std::endl;
+		std::cin >> flag;
+	}
 	agency.printCompletedRouts(std::cout);
-
+	std::cout << "Enter name of  info rout " << std::endl;
+	std::cin >> str;
+	agency.findinfo(str);
 
 
 
