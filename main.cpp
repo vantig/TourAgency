@@ -5,7 +5,7 @@ int main()
 	//std::ifstream
 	std::ifstream in("Bus.txt");
 	agency.readBuses(in);
-	in.close;
+	in.close();
 	in.open("Rout.txt");
 	agency.readRouts(in);
 	agency.printBuses(std::cout);

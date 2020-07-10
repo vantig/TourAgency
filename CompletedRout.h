@@ -13,7 +13,7 @@ public:
 	void setDateOfFinish(std::string d) { DateOfFinish = d; }
 	void setCountofPassengers(size_t c) { CountofPassengers = c; }
 	const bool operator==(const CompletedRout&rout)const;
-	friend std::ostream& operator<<(std::ostream& out, CompletedRout&);
+	friend std::ostream& operator<<(std::ostream& out, const CompletedRout&);
 
 private:
 		std::string DateOfStart;
@@ -21,7 +21,7 @@ private:
 	size_t CountofPassengers;
 	
 };
-std::ostream& operator<<(std::ostream& out, CompletedRout&temp)
+std::ostream& operator<<(std::ostream& out, const CompletedRout&temp)
 {
 	out << temp.getCost() << " " << temp.getName() << " " << temp.getNumber() << " " << temp.getDateOfStart() << " " << temp.getDateOfFinish() << " " << temp.getCountofPassengers();
 	return out;

@@ -12,7 +12,7 @@ public:
 	void setNumber(std::string n) { number = n; }
 	
 	friend std::istream& operator>>(std::istream& in, Bus&);
-	friend std::ostream& operator<<(std::ostream& out, Bus&);
+	friend std::ostream& operator<<(std::ostream& out, const Bus&);
 	const bool operator==(const Bus& bus)const;
 private:
 	std::string number;
@@ -20,7 +20,7 @@ private:
 	double mileage;
 	size_t maxPasangers;
 };
- std::ostream& operator<<(std::ostream& out, Bus&bus)
+ std::ostream& operator<<(std::ostream& out, const Bus&bus)
 {
 	 out << bus.getNumber() << " " << bus.getBusName() << " " << bus.getMaxPasangers();
 	 return out;

@@ -7,13 +7,13 @@ public:
 	~Rout() = default;
 	std::string getName()const { return name; }
 	std::string getStart()const{ return start; }
-	std::string getStart() const{ return start; }
+	std::string getFinish() const{ return finish; }
 	double getKm()const { return km; }
 	double getCost()const { return cost; }
 	void setName(std::string n) { name = n; }
 	void setCost(double c) { cost = c; }
 	friend std::istream& operator>>(std::istream& in, Rout&);
-	friend	std::ostream& operator<<(std::ostream& out, Rout& rout);
+	friend	std::ostream& operator<<(std::ostream& out,const Rout& rout);
 
 private:
 	std::string name;
@@ -22,7 +22,7 @@ private:
 	double km;
 	double cost;
 };
- std::ostream& operator<<(std::ostream& out, Rout&rout)
+ std::ostream& operator<<(std::ostream& out, const Rout&rout)
 {
 	 out<< rout.name <<" "<< rout.start <<" "<< rout.finish <<" "<< rout.km <<" "<< rout.cost;
 	 return out;
